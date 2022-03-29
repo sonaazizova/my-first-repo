@@ -7,6 +7,6 @@ public class Ders21 {
         Car car1 = new Car("Boz","Opel",2.3,4);
 
         car1.showInfos();
-
+        System.out.println();
     }
 }
