@@ -11,6 +11,7 @@ public class Ders25 {
         groups.add("Iron Maiden");
         groups.add("Guns' n Roses");
         groups.add("Black Sabbath");
+        groups.add("Ramstein");
 
      /*   //'get' funksiyasinin icine almaq istediyimiz index'i yaziriq
         System.out.println("Birinci elemet: " + groups.get(0));
