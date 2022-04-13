@@ -9,6 +9,5 @@ public class ATM_practice {
         balance = 1000;
         System.out.println("cixaraciginiz meblegi daxil edin: ");
         Scanner daxil = new Scanner(System.in);
-        i
     }
 }
