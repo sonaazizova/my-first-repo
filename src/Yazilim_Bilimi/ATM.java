@@ -14,6 +14,8 @@ public class ATM {
         //create scanner class object to get choice of user
         Scanner sc = new Scanner(System.in);
 
+
+        // LEARN THE FOUR FUNDAMENTALS OF OOP
         while (true) {
             System.out.println("Automated Teller Machine");
             System.out.println("Choose 1 for Withdraw");
@@ -65,6 +67,10 @@ public class ATM {
                 case 4:
                     //exit from the menu
                     System.exit(0);
+                    break;
+                default:
+                    System.out.println("this is default");
+                    break;
             }
         }
     }
