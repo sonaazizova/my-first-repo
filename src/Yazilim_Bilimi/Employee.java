@@ -17,6 +17,7 @@ public class Employee {  // Ishchi
         System.out.println("Adi: " + this.name);
         System.out.println("Söbə: " + this.department);
         System.out.println("maashi: " + this.salary);
+
     }
 }
 

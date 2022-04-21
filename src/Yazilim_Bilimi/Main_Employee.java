@@ -7,9 +7,9 @@ public class Main_Employee {
 
         employee.showInfos();*/
 
-        Manager_Employee manager_employee = new Manager_Employee("Akif Azizov", "IT", 3500);
+        Manager_Employee manager_employee = new Manager_Employee("Akif Azizov", "IT", 3500,20);
 
         manager_employee.showInfos();
+        manager_employee.raiseSalary(250);
     }
-
 }
