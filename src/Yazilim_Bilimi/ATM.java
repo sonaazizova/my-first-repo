@@ -31,7 +31,7 @@ public class ATM {
                     System.out.print("Enter money to be withdrawn:");
 
                     //get the withdrawl money from user
-                    withdraw = sc.nextInt();
+                      withdraw = sc.nextInt();
 
                     //check whether the balance is greater than or equal to the withdrawal amount
                     if (balance >= withdraw) {
