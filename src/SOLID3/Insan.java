@@ -4,6 +4,7 @@ public class Insan implements Canli {
 
     @Override
     public void yemek() {
+        System.out.println("Bishmish yemek");
 
     }
 

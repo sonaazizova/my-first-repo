@@ -21,8 +21,5 @@ public class mesele1 {
         else{
             System.out.println("0 neytral reqemdir");
         }
-
-
-
     }
 }
