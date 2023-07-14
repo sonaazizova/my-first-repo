@@ -35,12 +35,20 @@ public class test1 {
 //}
 
 
-        for (int i = 0; i < 6; i++) {
-            System.out.print("= ");
-           for (int j= 3;;j++){
-               System.out.print(" ");
-        }
+//        for (int i = 0; i < 6; i++) {
+//            System.out.print("= ");
+//           for (int j= 3;;j++){
+//               System.out.print(" ");
+//        }
+//
+//    }
+        for (int i = 0; i < 10; i++) {
+            if (i == 4) {
 
-    }
+                continue
+                        ;
+            }
+            System.out.println(i);
+        }
 }
 }
