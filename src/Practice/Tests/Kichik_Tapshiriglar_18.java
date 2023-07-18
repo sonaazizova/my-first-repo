@@ -38,4 +38,17 @@ class Tek_ededler{
 
     }
 }
+class Regemlerin_sayi{
+    public static void main(String[] args) {
 
+        String i;
+        System.out.print("Ededi daxil edin:  ");
+
+        Scanner sc = new Scanner(System.in);
+
+        i = sc.next();
+
+        System.out.println("Ededin regemlerinin sayi: " + i.length());
+
+    }
+}
