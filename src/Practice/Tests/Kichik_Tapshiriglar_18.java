@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Kichik_Tapshiriglar_18 {
     public static void main(String[] args) {
-        System.out.println("daxil edin:");
+        System.out.print("Ededi daxil edin:  ");
 
         int d;
         int i;
@@ -13,9 +13,29 @@ public class Kichik_Tapshiriglar_18 {
         d = sc.nextInt();
 
         for(i= 0; i<=d; i++){
-            if(i % i == 0 && i % 1 == 0 )
+            if(i%2 == 0 )
                 System.out.println(i);
         }
 
     }
 }
+
+class Tek_ededler{
+    public static void main(String[] args) {
+        System.out.print("Ededi Daxil edin:  ");
+
+        Scanner sc = new Scanner(System.in);
+
+        int i;
+        int d;
+
+        d = sc.nextInt();
+
+        for(i = 0 ; i <= d ; i++){
+            if(i %2 == 1)
+                System.out.println(i);
+        }
+
+    }
+}
+
