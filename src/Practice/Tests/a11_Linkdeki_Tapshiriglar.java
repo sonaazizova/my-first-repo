@@ -137,4 +137,122 @@ class Heftenin_gunleri2 { // Switch- Case ile
         }
     }
 }
+//6. Write a Java program that reads two floating-point numbers and tests whether they are the same up to three decimal places.
+
+//7. Write a Java program to find the number of days in a month.
+
+//8. Write a Java program that requires the user to enter a single character from the alphabet. Print Vowel or Consonant, depending on user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1, print an error message.
+
+
+class Il_chixama { //9. Write a Java program that takes a year from the user and prints whether it is a leap year or not.
+    public static void main(String[] args) {
+        int il;
+
+        System.out.println("Sichramaq istediyiniz ili geyd edin: ");
+        Scanner sc = new Scanner(System.in);
+
+        il = sc.nextInt();
+
+        System.out.println(il + " is a leap year");
+    }
+}
+//10. Write a Java program to display the first 10 natural numbers.
+
+class A10cu_Tapshirig { //11. Write a Java program to display n terms of natural numbers and their sum.
+
+    public static void main(String[] args) {
+        int i, n, sum = 0;
+        {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Input number: ");
+            n = in.nextInt();
+        }
+        System.out.println("The first n natural numbers are : " + n);
+
+        for (i = 1; i <= n; i++) {
+            System.out.println(i);
+            sum += i;
+        }
+        System.out.println("The Sum of Natural Number upto " + n + " terms : " + sum);
+
+    }
+}
+
+class Topluyub_sayina_bol {//12. Write a program in Java to input 5 numbers from the keyboard and find their sum and average.
+
+    public static void main(String[] args) {
+
+        int n;
+        int a;
+        double b = 0;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        System.out.println("Input the " + n + " numbers: ");
+
+        for (a = 1; a <= n; a++) {
+            System.out.println(a);
+            b += a;
+        }
+        System.out.println("The sum of " + n + " no is : " + b);
+
+        System.out.println("The Average is: " + (b / n));
+    }
+}
+
+class Kuba_yukseltme {//13. Write a Java program to display the cube of the given number up to an integer.
+
+    public static void main(String[] args) {
+        int n;
+        int a;
+
+        System.out.print("Input number of terms: ");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        for (a = 1; a <= n; a++) {
+            System.out.println("Number is : " + a + " and cube of " + a + " is : " + (a * a * a));
+
+        }
+    }
+}
+
+class Vurma_Cedveli { //14. Write a Java program to display the multiplication table of a given integer.
+
+    public static void main(String[] args) {
+
+        int n;
+        int a;
+        int sum = 1;
+        System.out.print("Input the  number of terms : ");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+
+        for (a = 0; a <= n; a++) {
+            System.out.println(n + " X " + a + " = " + (a * n));
+
+        }
+    }
+}
+
+class Tek_ededler2 {
+    public static void main(String[] args) {
+        System.out.print("Input number of terms is: ");
+        int i;
+        int a;
+        int sum= 0;
+        Scanner scanner = new Scanner(System.in);
+
+        i = scanner.nextInt();
+        System.out.println("The odd numbers are: " );
+        for (a = 1; a <= i; a++) {
+            System.out.println((a * 2 - 1));
+            sum += a*2-1;
+
+        }
+        System.out.println("The Sum of odd Natural Number upto "+i+ " terms is: " + sum);
+    }
+}
+
+
 
