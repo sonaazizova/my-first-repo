@@ -4,10 +4,14 @@ import javax.security.sasl.SaslClient;
 import java.util.Scanner;
 
 public class ATM_practice {
-    public static void main(String[] args) {
-        int balance;
-        balance = 1000;
-        System.out.println("cixaraciginiz meblegi daxil edin: ");
-        Scanner daxil = new Scanner(System.in);
+    public static int FindFaktorial(int value) {
+        int faktorial = 1;
+        for (int i = 1; i <= value; i++) {
+            faktorial *= i;
+
+        }
+        return faktorial;
+
     }
 }
+

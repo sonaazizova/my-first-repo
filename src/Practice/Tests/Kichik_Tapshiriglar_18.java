@@ -1,5 +1,7 @@
 package Practice.Tests;
 
+import Yazilim_Bilimi.ATM_practice;
+
 import java.util.Scanner;
 
 public class Kichik_Tapshiriglar_18 {
@@ -12,15 +14,15 @@ public class Kichik_Tapshiriglar_18 {
 
         d = sc.nextInt();
 
-        for(i= 0; i<=d; i++){
-            if(i%2 == 0 )
+        for (i = 0; i <= d; i++) {
+            if (i % 2 == 0)
                 System.out.println(i);
         }
 
     }
 }
 
-class Tek_ededler{
+class Tek_ededler {
     public static void main(String[] args) {
         System.out.print("Ededi Daxil edin:  ");
 
@@ -31,14 +33,15 @@ class Tek_ededler{
 
         d = sc.nextInt();
 
-        for(i = 0 ; i <= d ; i++){
-            if(i %2 == 1)
+        for (i = 0; i <= d; i++) {
+            if (i % 2 == 1)
                 System.out.println(i);
         }
 
     }
 }
-class Regemlerin_sayi{
+
+class Regemlerin_sayi {
     public static void main(String[] args) {
 
         String i;
@@ -52,3 +55,57 @@ class Regemlerin_sayi{
 
     }
 }
+
+class HackerRank2 {
+    public static void main(String[] args) {
+
+        System.out.print("Input n : ");
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        if (n % 2 == 1) {
+            System.out.println("Weird");
+        }
+        else if (n % 2 == 0 && n >= 2 && n <= 5) {
+            System.out.println("Not Weird");
+        }
+        else if (n % 2 == 0 && n >= 6 && n <= 20) {
+            System.out.println("Weird");
+        }
+        else if (n % 2 == 0 && n > 20) {
+            System.out.println("Not Weird");
+        }
+
+    }
+}
+
+class any{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value: ");
+        int value = sc.nextInt();
+
+        System.out.println(ATM_practice.FindFaktorial(value));
+
+
+    }
+
+    }
+class Airplane {
+    static int start = 2;
+    final int end;
+    public Airplane(int x) {
+        x = 4;
+        end = x;
+    }
+    public void fly(int distance) {
+        System.out.print(end-start+" ");
+        System.out.print(distance);
+    }
+    public static void main(String... start) {
+        new Airplane(10).fly(5);
+    }
+}
+

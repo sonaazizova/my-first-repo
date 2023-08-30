@@ -241,6 +241,7 @@ class Tek_ededler2 {
         int i;
         int a;
         int sum= 0;
+
         Scanner scanner = new Scanner(System.in);
 
         i = scanner.nextInt();
