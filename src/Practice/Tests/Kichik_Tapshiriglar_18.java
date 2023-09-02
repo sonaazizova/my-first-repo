@@ -108,4 +108,44 @@ class Airplane {
         new Airplane(10).fly(5);
     }
 }
+class Kuruyemis {
+    public void goruntu()
+    {
+        System.out.println("Kuruyemişler");
+    }
+}
+//Override ederek sınıflarımızı oluşturduk ve içlerine metotlarımızı tanımladık.
+class Fındık extends Kuruyemis
+{
+    @Override
+    public void goruntu() {
+        System.out.println("Fındık (Tadı güzelmiş he)");
+    }
+}
+class Ceviz extends Kuruyemis
+{
+    @Override
+    public void goruntu() {
+        System.out.println("Ceviz");
+    }
+}
 
+class Main
+{
+    public static void main(String[] args)
+    {
+
+        //kuruyemis sınıfından bir nesne oluşturduk
+        Kuruyemis kryms = new Kuruyemis();
+        kryms.goruntu();
+
+        //Fındık sınıfından bir nesne oluşturduk.
+        Fındık fndk = new Fındık();
+        fndk.goruntu();
+
+        //Ceviz sınıfından bir nesne oluşturduk.
+        Ceviz cvz = new Ceviz();
+        cvz.goruntu();
+
+    }
+}
