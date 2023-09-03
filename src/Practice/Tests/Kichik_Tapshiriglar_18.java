@@ -149,3 +149,17 @@ class Main
 
     }
 }
+class elebele{
+    static int a = 12, b = 3;
+
+
+    public static int verilenEdediTap(int i){
+        i = a - b;
+        return i;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(verilenEdediTap(0));
+
+    }
+}
