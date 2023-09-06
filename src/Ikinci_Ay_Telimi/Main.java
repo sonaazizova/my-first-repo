@@ -1,39 +1,45 @@
 package Ikinci_Ay_Telimi;
 
 import beans.Students;
+import util.InputUtil;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("What do you want to do?" +
-                    "\n1. Register Student " +
-                            "\n2. Show All Students" +
-                            "\n3. Find Stuent" +
-                            "\n4. Update Student" + "\n");
-        Scanner sc = new Scanner(System.in);
-        int menu = sc.nextInt();
-        if (menu == 1){
-            sc = new Scanner(System.in);
-            System.out.println("Enter name:");
-            String name  = sc.nextLine();
+        int menu = InputUtil.requireNumber("What do you want to do?" +
+                "\n1. Register Student " +
+                "\n2. Show All Students" +
+                "\n3. Find Stuent" +
+                "\n4. Update Student" + "\n");
 
-            sc= new Scanner(System.in);
-            System.out.println("Enter surname");
-            String surname = sc.nextLine();
+        if (menu == 1) {
 
-            sc = new Scanner(System.in);
-            System.out.println("Enter age");
-            int age = sc.nextInt();
+            int count = InputUtil.requireNumber("Neche telebe qeydiyyatdan kechib?");
+            Config.students = new Students[count];
 
-            sc = new Scanner(System.in);
-            System.out.println("Enter Class:");
-            String ClassName  = sc.nextLine();
+            for (int i = 0; count > i; i++) {
+                System.out.println((i+1) + ". Register");
 
-            System.out.println("" + name + " " + surname + " registired sucsesfully");
+                String name = InputUtil.requireText("Enter name");
+                String surname = InputUtil.requireText("Enter surname");
+                int age = InputUtil.requireNumber("Enter age");
+                String className = InputUtil.requireText("Enter class");
 
-            Students st = new Students(name, surname, age, ClassName);
+                System.out.println("" + name + " " + surname + " registired sucsesfully");
+
+                Students st = new Students(name, surname, age, className);
+
+                Config.students[i] = st;
+            }
+            System.out.println("Registration completed succsesfully");
+            for (int i = 0 ; i<Config.students.length ; i++){
+                Students st = Config.students[i];
+                System.out.println(st.getName() + "" + st.getSurname() + "" + st.getAge() + "" + st.getClassName());
+
+            }
+
         }
     }
 }
