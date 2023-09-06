@@ -4,17 +4,17 @@ public class Students {
     private String name;
     private String surname;
     private int age;
-    private String ClassName;
+    private String className;
 
 
     public Students() {
     }
 
-    public Students( String name, String surname , int age, String ClasName){
+    public Students( String name, String surname , int age, String clasName){
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.ClassName = ClasName;
+        this.className = clasName;
     }
 
     public String getName() {
@@ -42,11 +42,10 @@ public class Students {
     }
 
     public String getClassName() {
-        return ClassName;
+        return className;
     }
-
-    public void setClassName(String className) {
-        ClassName = className;
+    public void setClassName(String className){
+        this.className = className;
     }
 }
 
