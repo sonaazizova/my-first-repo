@@ -2,6 +2,7 @@ package Ikinci_Ay_Telimi;
 
 import beans.Students;
 import util.InputUtil;
+import util.StudentUtil;
 
 import java.util.Scanner;
 
@@ -15,31 +16,17 @@ public class Main {
                 "\n4. Update Student" + "\n");
 
         if (menu == 1) {
-
-            int count = InputUtil.requireNumber("Neche telebe qeydiyyatdan kechib?");
-            Config.students = new Students[count];
-
-            for (int i = 0; count > i; i++) {
-                System.out.println((i+1) + ". Register");
-
-                String name = InputUtil.requireText("Enter name");
-                String surname = InputUtil.requireText("Enter surname");
-                int age = InputUtil.requireNumber("Enter age");
-                String className = InputUtil.requireText("Enter class");
-
-                System.out.println("" + name + " " + surname + " registired sucsesfully");
-
-                Students st = new Students(name, surname, age, className);
-
-                Config.students[i] = st;
-            }
-            System.out.println("Registration completed succsesfully");
-            for (int i = 0 ; i<Config.students.length ; i++){
+            StudentUtil.registerStudents();
+        } else if (menu == 2) {
+            StudentUtil.printAllRegisteredStudents();
+        } else if (menu == 3) {
+            String text = InputUtil.requireText("Type name, surname or class name");
+            for (int i = 0; i < Config.students.length; i++) {
                 Students st = Config.students[i];
-                System.out.println(st.getName() + "" + st.getSurname() + "" + st.getAge() + "" + st.getClassName());
-
+                if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)){
+                    System.out.println(st.getFullInfo());
+                }
             }
-
         }
     }
 }
