@@ -15,22 +15,53 @@ public class StudentUtil {
     }
 
     public static void printAllRegisteredStudents() {
-        if( Config.students == null){
+        if (Config.students == null) {
             return;
         }
         for (int i = 0; i < Config.students.length; i++) {
             Students st = Config.students[i];
-            System.out.println(st.getName() + "" + st.getSurname() + "" + st.getAge() + "" + st.getClassName());
+            System.out.println(st.getFullInfo());
         }
     }
-    public static void registerStudents(){
+
+    public static void registerStudents() {
         int count = InputUtil.requireNumber("Neche telebe qeydiyyatdan kechib?");
         Config.students = new Students[count];
         for (int i = 0; count > i; i++) {
-            System.out.println((i+1) + ". Register");
+            System.out.println((i + 1) + ". Register");
             Config.students[i] = StudentUtil.fillStudent();
         }
         System.out.println("Registration completed succsesfully");
         StudentUtil.printAllRegisteredStudents();
+    }
+
+    public static void temp() {
+        String text = InputUtil.requireText("Type name, surname or class name");
+        for (int i = 0; i < Config.students.length; i++) {
+            Students st = Config.students[i];
+            if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)) {
+                System.out.println(st.getFullInfo());
+            }
+        }
+    }
+
+    public static Students[] findStudents(String text) {
+
+        int count = 0;
+        for (int i = 0; i < Config.students.length; i++) {
+            Students st = Config.students[i];
+            if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)) {
+                count++;
+            }
+        }
+        Students[] result = new Students[count];
+        int found = 0;
+        for (int i = 0; i < Config.students.length; i++) {
+            Students st = Config.students[ i];
+            if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)) {
+                result[found++] = st;
+            }
+        }
+        return result;
     }
 }

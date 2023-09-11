@@ -20,13 +20,8 @@ public class Main {
         } else if (menu == 2) {
             StudentUtil.printAllRegisteredStudents();
         } else if (menu == 3) {
-            String text = InputUtil.requireText("Type name, surname or class name");
-            for (int i = 0; i < Config.students.length; i++) {
-                Students st = Config.students[i];
-                if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)){
-                    System.out.println(st.getFullInfo());
-                }
-            }
+            StudentUtil.findStudents("Find Students");
         }
     }
 }
+

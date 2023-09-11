@@ -48,7 +48,7 @@ public class Students {
         this.className = className;
     }
     public String getFullInfo(){
-        System.out.println(this.getName() + "" + this.getSurname() + "" + this.getAge() + "" + this.getClassName());
+        return (this.getName() + "" + this.getSurname() + "" + this.getAge() + "" + this.getClassName());
     }
 }
 
