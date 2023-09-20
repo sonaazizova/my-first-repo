@@ -25,7 +25,7 @@ public class StudentUtil {
     }
 
     public static void registerStudents() {
-        int count = InputUtil.requireNumber("Neche telebe qeydiyyatdan kechib?");
+        int count = InputUtil.requireNumber("Neche telebe qeydiyyatdan kechireceksiniz?");
         Config.students = new Students[count];
         for (int i = 0; count > i; i++) {
             System.out.println((i + 1) + ". Register");
@@ -35,13 +35,11 @@ public class StudentUtil {
         StudentUtil.printAllRegisteredStudents();
     }
 
-    public static void temp() {
+    public static void findStudentsAndPrint() {
         String text = InputUtil.requireText("Type name, surname or class name");
-        for (int i = 0; i < Config.students.length; i++) {
-            Students st = Config.students[i];
-            if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)) {
-                System.out.println(st.getFullInfo());
-            }
+        Students [] tapilanStudentler = findStudents("ad");
+        for(int i = 0; i<tapilanStudentler.length; i++){
+            System.out.println(tapilanStudentler[i].getFullInfo());
         }
     }
 
@@ -69,12 +67,12 @@ public class StudentUtil {
     public static void main(String[] args) {
         Students [] students = {
                 new Students("ad1","soyad1",11,"9A"),
-                new Students("ad1","soyad1",11,"9A"),
-                new Students("ad1","soyad1",11,"9A"),
+                new Students("asd2","soyad1",11,"9A"),
+                new Students("aed1","soyasd1",11,"9A"),
                 new Students("ad1","soyad1",11,"9A")
         };
         Config.students = students;
-        Students [] tapilanStudentler = findStudents("ad");
+
     }
 }
 

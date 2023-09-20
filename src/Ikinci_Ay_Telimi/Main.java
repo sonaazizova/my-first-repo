@@ -20,7 +20,7 @@ public class Main {
         } else if (menu == 2) {
             StudentUtil.printAllRegisteredStudents();
         } else if (menu == 3) {
-            StudentUtil.findStudents("Find Students");
+            StudentUtil.findStudentsAndPrint();
         }
     }
 }
