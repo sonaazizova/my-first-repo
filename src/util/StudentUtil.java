@@ -59,9 +59,22 @@ public class StudentUtil {
         for (int i = 0; i < Config.students.length; i++) {
             Students st = Config.students[ i];
             if (st.getName().contains(text) || st.getSurname().contains(text) || st.getClassName().contains(text)) {
-                result[found++] = st;
+                result[found] = st;
+                found++;
             }
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        Students [] students = {
+                new Students("ad1","soyad1",11,"9A"),
+                new Students("ad1","soyad1",11,"9A"),
+                new Students("ad1","soyad1",11,"9A"),
+                new Students("ad1","soyad1",11,"9A")
+        };
+        Config.students = students;
+        Students [] tapilanStudentler = findStudents("ad");
+    }
 }
+
