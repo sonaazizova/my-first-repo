@@ -9,18 +9,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int menu = InputUtil.requireNumber("What do you want to do?" +
-                "\n1. Register Student " +
-                "\n2. Show All Students" +
-                "\n3. Find Stuent" +
-                "\n4. Update Student" + "\n");
+        int menu = 0;
 
-        if (menu == 1) {
-            StudentUtil.registerStudents();
-        } else if (menu == 2) {
-            StudentUtil.printAllRegisteredStudents();
-        } else if (menu == 3) {
-            StudentUtil.findStudentsAndPrint();
+        while (true) {
+            menu = InputUtil.requireNumber("What do you want to do?" +
+                    "\n1. Register Student " +
+                    "\n2. Show All Students" +
+                    "\n3. Find Stuent" +
+                    "\n4. Update Student :" + "\n");
+
+            if (menu == 1) {
+                StudentUtil.registerStudents();
+            } else if (menu == 2) {
+                StudentUtil.printAllRegisteredStudents();
+            } else if (menu == 3) {
+                StudentUtil.findStudentsAndPrint();
+            }
         }
     }
 }
